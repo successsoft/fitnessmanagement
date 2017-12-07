@@ -423,7 +423,7 @@ a:hover{
 }
 
 #header{
-	background: url('../img/bg-header.jpg') no-repeat center center fixed;
+	background: url('../img/home-image.jpg') no-repeat 0 -250px;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 	    -ms-background-size: cover;
@@ -433,11 +433,11 @@ a:hover{
 }
 
 #header .overlay{
-	background: rgba(41, 128, 185, 0.2);
+	background: rgba(18, 19, 20, 0.34);
 	*padding-top: 50px;
 	*padding-bottom: 60px;
-	padding-top: 10px;
-	padding-bottom: 50px;
+	padding-top: 25px;
+	padding-bottom: 55px;
 }
 
 #header .navbar-toggle{
@@ -477,6 +477,9 @@ a:hover{
 	font-size: 10pt;
 	color: #ecf0f1;
 }
+#header .navbar-collapse ul.nav li.active a{
+	padding-bottom: 10px;
+}
 
 #header .navbar-collapse ul.nav li a:hover,
 #header .navbar-collapse ul.nav li a:focus,
@@ -487,6 +490,14 @@ a:hover{
 	    -ms-transition: all 1s ease;
 	     -o-transition: all 1s ease;
 	        transition: all 1s ease;
+	
+}
+
+#header .navbar-collapse ul.nav li.active a:hover,
+#header .navbar-collapse ul.nav li.active a:focus,
+#header .navbar-collapse ul.nav li.active a:active{
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
 }
 
 #header .nav .open > a, 
@@ -505,12 +516,14 @@ a:hover{
 }
 
 #header .navbar-collapse ul.nav li.active{
-	background-color: rgba(41, 128, 185, 0.9);
+	/*background-color: rgba(41, 128, 185, 0.9);
 	-webkit-border-radius: 4px;
 	   -moz-border-radius: 4px;
 	    -ms-border-radius: 4px;
 	     -o-border-radius: 4px;
-			border-radius: 4px;
+			border-radius: 4px;*/
+	
+	border-bottom: 4px solid #2980b9;
 }
 
 #header .navbar-collapse .dropdown-menu{
@@ -3060,6 +3073,12 @@ footer .content-widget-footer .icon-footer i.fa{
 	margin-bottom: 15px;
 }
 
+.footer-bottom{
+	background: #171818;
+	border-top: 4px solid #2980b9;
+	margin-top: 10px;
+}
+
 .footer-bottom .footer-bottom-widget{
 	border-top: 1px solid #ddd;
 	margin-top: 25px;
@@ -3068,7 +3087,7 @@ footer .content-widget-footer .icon-footer i.fa{
 }
 
 .footer-bottom .footer-bottom-widget p{
-	color: #7f8c8d;
+	color: #fff;
 }
 
 .footer-bottom .footer-bottom-widget .sosmed-footer{
@@ -3107,7 +3126,7 @@ footer .content-widget-footer .icon-footer i.fa{
 
 .footer-bottom .footer-bottom-widget .footer-bottom-links a{
 	margin-left: 15px;	
-	color: #7f8c8d;
+	color: #fff;
 	font-size: 11pt;
 }
 
@@ -3222,7 +3241,7 @@ label.error {
 
 	.footer-bottom .footer-bottom-widget .footer-bottom-links a{
 		margin-left: 2px;	
-		color: #7f8c8d;
+		color: #fff;
 		font-size: 11pt;
 	}
 
