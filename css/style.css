@@ -2532,6 +2532,10 @@ a:hover{
 		border-top: 1px solid #2980b9;
 	}
 	
+	.table-custom.table > tbody > tr > td.text-right{
+		padding-right: 30px;
+	}
+	
 	/*	Charts
 	==========================================*/
 

@@ -20,9 +20,9 @@ last name
 Gender - radio button - male,female,others
 date of birth - date picker
 Age - read - autocalculation
+Blood group - DropDown
 Language Known- dropdown - textbox- remove option should be added
 Body Type - radio button - Normal,Physically challenged
-Blood group - DropDown
 mobile no
 Emergency mobile no 
 primary Email ID
@@ -36,6 +36,7 @@ Branch Name - read only for other users but dropdown should show admin users
 Reffered By - drop down - Memeber,Direct,Employee, if choose Employee or Member   textbox-should auto generate
 PackageType - yearly,halfyearly,queteryearly,monthly
 ClientType - membership,Prospective
+
 Personal Training - radio button Yes or No
 Client Mode - Active,Inactive,Freeze if choose freeze option the freezed month will be extended in your package,frezee is applicable for maximum one month 
 Joining date - date picker
