@@ -1,0 +1,108 @@
+Adduser
+======
+Employee ID - drop down
+Employeename - read
+Password - read and write
+confirm password - read and write
+Role Type - drop down - superadmin,admin,lead,user
+/////Branch Name - DropDown if you will choose user or lead 
+Access type - if they will choose user need to show radio button for choose temperary or permanent 
+access period from - datepicker
+access period to - datepicker
+Access Mode - Active,Inactive
+
+
+client form 
+===========
+firstname
+middle name 
+last name
+Gender - radio button - male,female,others
+date of birth - date picker
+Age - read - autocalculation
+Language Known- dropdown - textbox- remove option should be added
+Body Type - radio button - Normal,Physically challenged
+Blood group - DropDown
+mobile no
+Emergency mobile no 
+primary Email ID
+alternate email id 
+permanent address 
+pincode
+country 
+state 
+city
+Branch Name - read only for other users but dropdown should show admin users 
+Reffered By - drop down - Memeber,Direct,Employee, if choose Employee or Member   textbox-should auto generate
+PackageType - yearly,halfyearly,queteryearly,monthly
+ClientType - membership,Prospective
+Personal Training - radio button Yes or No
+Client Mode - Active,Inactive,Freeze if choose freeze option the freezed month will be extended in your package,frezee is applicable for maximum one month 
+Joining date - date picker
+Expirydate - read-autocalculate from your joning date
+Checkin Time - 
+Checkout time - 
+ 
+
+prospective form
+================
+firstname
+middle name 
+last name
+Gender - radio button - male,female,others
+mobile no
+Alternate mobile no 
+primary Email ID
+alternate email id 
+Address 
+pincode 
+country 
+state 
+city
+ProspectiveType - dorp down - 
+PackageType - yearly,halfyearly,queteryearly,monthly
+Checkin Time - 
+Checkout time -  
+Expecteddatetojoin - datepicker
+Comments - text
+ 
+
+Payment Form
+============
+Branch Name - read only for other users but dropdown should show admin users  
+Member Name- dropdown
+Member ID - read - text
+Mobile No - read -text
+packagetype - read & edit - 
+PaymentType -dropdown - Cash,Debit,Credit,Cheque,Paytm,Netbanking
+Payment mode - dorp down - Full,EMI
+MemberType - Dropdown
+Amount- read and write -text
+discount - text
+Total Amount - read
+Paid Amount - text
+Due Amount - read - Autocalculation
+Expected date to pay dueamount - datepicker if only EMI amount column as greater then 0
+
+Branch Master:
+=============
+Branch Code - read
+Branch Name
+Branch Address
+Brach Country 
+Branch State
+Branch City
+Branch Incharge
+Branch Mode - Active,Inactive 
+
+PaymentMaster
+=============
+Pakage Type
+Member Type - single,couple,student,SeniorCitizen
+Amount - text
+Package Mode - Active,Inactive
+
+ 
+
+
+

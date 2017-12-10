@@ -567,7 +567,7 @@ a:hover{
 #main{
 	background-color: #f2f2f2;
 	padding: 20px;
-	margin-top: -55px;
+	*margin-top: -55px;
 	-webkit-border-radius: 4px;
 	   -moz-border-radius: 4px;
 	    -ms-border-radius: 4px;
@@ -2399,6 +2399,27 @@ a:hover{
 	    height: 100px;
 	    line-height: 100px;
 	}
+	
+	input.form-control{
+		border:1px solid #66afe9;
+		
+	}
+	input.form-control:focus{
+		border: 1px solid #3c763d;
+		outline: 0;
+		box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(16, 243, 73, 0.6);
+		-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(16, 243, 73, 0.6);
+			-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(16, 243, 73, 0.6);
+				-ms-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(16, 243, 73, 0.6);
+					-o-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(16, 243, 73, 0.6);
+			
+		transition: border-color ease-in-out .5s,box-shadow ease-in-out .5s;
+		-webkit-transition: border-color ease-in-out .5s,-webkit-box-shadow ease-in-out .5s;
+			-moz-transition: border-color ease-in-out .5s,-webkit-box-shadow ease-in-out .5s;
+				-ms-transition: border-color ease-in-out .5s,-webkit-box-shadow ease-in-out .5s;	
+					-o-transition: border-color ease-in-out .5s,box-shadow ease-in-out .5s;
+
+	}
 
 	/*	DATA TABLES
 	==========================================*/
@@ -2489,7 +2510,28 @@ a:hover{
 	.dataTable tr:last-child {
 	    border-bottom: 1px solid #ddd;
 	}
-
+	table.table-custom .btn-xs, .btn-group-xs > .btn{
+		padding: 5px 10px;
+		margin-left: 10px;
+	}
+	
+	table.table-custom{
+		*border:1px solid #2980b9;
+	}
+	
+	.table-custom.table-striped > tbody > tr:nth-child(2n+1) > td, .table-custom.table-striped > tbody > tr:nth-child(2n+1) > th{
+		background-color: #f6f6f6;
+	}
+	
+	.table-custom.table-striped > thead > tr{
+		background: #2980b9;
+		color: #fff;
+	}
+	
+	.table-custom.table > tbody > tr > td{
+		border-top: 1px solid #2980b9;
+	}
+	
 	/*	Charts
 	==========================================*/
 
@@ -3098,7 +3140,7 @@ footer .content-widget-footer .icon-footer i.fa{
 	margin-right: 15px;
 	width: 30px;
 	height: 30px;
-	background-color: #8d9aa5;
+	background-color: #175985;
 	color: #e7e7e7;
 	-webkit-border-radius: 4px;
 	   -moz-border-radius: 4px;
@@ -3129,7 +3171,9 @@ footer .content-widget-footer .icon-footer i.fa{
 	color: #fff;
 	font-size: 11pt;
 }
-
+.footer-bottom .footer-bottom-widget .footer-bottom-links a img{
+	width: 110px;
+}
 label.error {
     font-size: 12px;
     font-weight: normal;
