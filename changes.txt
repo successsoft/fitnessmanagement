@@ -1,0 +1,6 @@
+#main {
+    background-color: rgb(242, 242, 242);
+    padding: 20px;
+    border-radius: 4px 4px 4px 4px;
+    border-bottom: 4px solid rgb(221, 221, 221);
+}
