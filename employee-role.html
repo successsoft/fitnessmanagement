@@ -23,6 +23,7 @@
     <link rel="stylesheet" type="text/css" href="css/owl.transitions.css">
 	
 	<link rel="stylesheet" type="text/css" href="assets/select2/select2.css">
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap-datepicker/bootstrap-datepicker.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -290,7 +291,7 @@
                                         </div>
                                     </a>
                                 </li>
-								<li>
+								<li class="active">
                                     <a href="employee-role.html">
                                         <div class="text-center">
                                             <i class="fa fa-users fa-3x"></i><br>
@@ -298,13 +299,38 @@
                                         </div>
                                     </a>
                                 </li>
-								<li class="active">
-                                    <a href="users.html">
+								<li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                         <div class="text-center">
                                             <i class="fa fa-user fa-3x"></i><br>
-                                            User
+                                            Users <span class="caret"></span>
                                         </div>
                                     </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="clients.html"><i class="fa fa-list"></i> Client</a></li>
+                                        <li><a href="prospective.html"><i class="fa fa-th-large"></i> Prospective</a></li>
+                                        <li><a href="payment.html"><i class="fa fa-money"></i> Payment</a></li>
+                                    </ul>
+                                </li>
+								<li>
+                                    <a href="employee.html">
+                                        <div class="text-center">
+                                            <i class="fa fa-user fa-3x"></i><br>
+                                            Employee
+                                        </div>
+                                    </a>
+                                </li>
+								<li class="dropdown">
+                                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                        <div class="text-center">
+                                            <i class="fa fa-th-large fa-3x"></i><br>
+                                            Masters <span class="caret"></span>
+                                        </div>
+                                    </a>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="branchs.html"><i class="fa fa-list"></i> Branch</a></li>
+                                        <li><a href="payment.html"><i class="fa fa-money"></i> Payment</a></li>
+                                    </ul>
                                 </li>
                                 <li class="dropdown">
                                     <a href="calendar.html">
@@ -354,7 +380,7 @@
                 <!-- start:breadcrumb -->
                 <ol class="breadcrumb">
                     <li><a href="#">Home</a></li>
-                    <li class="active">Users</li>
+                    <li class="active">Employee</li>
                 </ol>
                 <!-- end:breadcrumb -->   
 				
@@ -362,9 +388,11 @@
                     <div class="col-lg-12">
                         <section class="panel">
                             <header class="panel-heading">
-                                User List
+                                Employee List
 								<div class="pull-right">
-									<button title="" class="btn btn-success btn-drop" type="button" data-toggle="modal" data-target=".bs-users"><i title="" class="fa fa-plus" data-original-title=""></i> Add User</button>
+									<button title="" class="btn btn-success btn-drop" type="button" data-toggle="modal" data-target=".bs-users">
+										<i title="" class="fa fa-plus" data-original-title=""></i> Add Employee Role
+									</button>
 								</div>
 								<div class="clearfix"></div>
                             </header>
@@ -372,145 +400,132 @@
                                 <thead>
                                     <tr>
                                         <th class="col-md-2"><i class="fa fa-bullhorn"></i> Employee Id</th>
-										<th class="col-md-2"><i class="fa fa-bullhorn"></i> Employee Name</th>
-                                        <th class="hidden-phone col-md-2"><i class="fa fa-question-circle"></i> Role</th>
-                                        <th class="col-md-2"><i class="fa fa-bookmark"></i> Access</th>
+										<th class="col-md-2"><i class="fa fa-user"></i> Employee Name</th>
+										<th class="col-md-2"><i class="fa fa-user"></i> Role</th>
+                                        <th class="col-md-2"><i class="fa fa-bookmark"></i> Access Type</th>
+										<th class="col-md-2"><i class="fa fa-calendar"></i> Access From/To</th>
                                         <th class="col-md-2 text-center"><i class=" fa fa-edit"></i> Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td><a href="#">Vector Ltd</a></td>
-                                        <td class="hidden-phone">Lorem Ipsum dorolo imit</td>
-                                        <td>12120.00$ </td>
-                                        <td><span class="label label-info label-mini">Due</span></td>
+                                        <td><a href="#">Emp 0001</a></td>
+                                        <td class="hidden-phone">Employee 01</td>
+										<td>Admin</td>
+                                        <td>-</td>
+										<td>12-12-2017/30-12-2017</td>
                                         <td class="text-center">
-                                            <button class="btn btn-success btn-xs btn-drop"><i class="fa fa-check"></i></button>
-                                            <button class="btn btn-primary btn-xs btn-drop"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-danger btn-xs btn-drop"><i class="fa fa-trash"></i></button>
+                                            <button class="btn btn-success btn-xs btn-drop tip" title="Active"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-primary btn-xs btn-drop tip" title="Edit"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-xs btn-drop tip" title="Delete"><i class="fa fa-trash"></i></button>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td>
-                                            <a href="#">
-                                                Adimin co
-                                            </a>
-                                        </td>
-                                        <td class="hidden-phone">Lorem Ipsum dorolo</td>
-                                        <td>56456.00$ </td>
-                                        <td><span class="label label-warning label-mini">Due</span></td>
-                                        <td>
-                                            <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                            <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+                                        <td><a href="#">Emp 0002</a></td>
+                                        <td class="hidden-phone">Employee 02</td>
+										<td>User</td>
+                                        <td>Temperary</td>
+										<td>12-12-2017/30-12-2017</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-success btn-xs btn-drop tip" title="Active"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-primary btn-xs btn-drop tip" title="Edit"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-xs btn-drop tip" title="Delete"><i class="fa fa-trash"></i></button>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="#">
-                                                boka soka
-                                            </a>
-                                        </td>
-                                        <td class="hidden-phone">Lorem Ipsum dorolo</td>
-                                        <td>14400.00$ </td>
-                                        <td><span class="label label-success label-mini">Paid</span></td>
-                                        <td>
-                                            <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                            <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+									<tr>
+                                        <td><a href="#">Emp 0003</a></td>
+                                        <td class="hidden-phone">Employee 03</td>
+										<td>User</td>
+                                        <td>Temperary</td>
+										<td>12-12-2017/30-12-2017</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-success btn-xs btn-drop tip" title="Active"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-primary btn-xs btn-drop tip" title="Edit"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-xs btn-drop tip" title="Delete"><i class="fa fa-trash"></i></button>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="#">
-                                                salbal llb
-                                            </a>
-                                        </td>
-                                        <td class="hidden-phone">Lorem Ipsum dorolo</td>
-                                        <td>2323.50$ </td>
-                                        <td><span class="label label-danger label-mini">Paid</span></td>
-                                        <td>
-                                            <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                            <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+									<tr>
+                                        <td><a href="#">Emp 0004</a></td>
+                                        <td class="hidden-phone">Employee 04</td>
+										<td>User</td>
+                                        <td>Permanent</td>
+										<td>12-12-2017/30-12-2017</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-success btn-xs btn-drop tip" title="Active"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-primary btn-xs btn-drop tip" title="Edit"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-xs btn-drop tip" title="Delete"><i class="fa fa-trash"></i></button>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td><a href="#">Vector Ltd</a></td>
-                                        <td class="hidden-phone">Lorem Ipsum dorolo imit</td>
-                                        <td>12120.00$ </td>
-                                        <td><span class="label label-primary label-mini">Due</span></td>
-                                        <td>
-                                            <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                            <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+									<tr>
+                                        <td><a href="#">Emp 0005</a></td>
+                                        <td class="hidden-phone">Employee 05</td>
+										<td>User</td>
+                                        <td>Temperary</td>
+										<td>12-12-2017/30-12-2017</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-warning btn-xs btn-drop tip" title="Inactive"><i class="fa fa-exclamation-triangle"></i></button>
+                                            <button class="btn btn-primary btn-xs btn-drop tip" title="Edit"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-xs btn-drop tip" title="Delete"><i class="fa fa-trash"></i></button>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="#">
-                                                Adimin co
-                                            </a>
-                                        </td>
-                                        <td class="hidden-phone">Lorem Ipsum dorolo</td>
-                                        <td>56456.00$ </td>
-                                        <td><span class="label label-warning label-mini">Due</span></td>
-                                        <td>
-                                            <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                            <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+									<tr>
+                                        <td><a href="#">Emp 0006</a></td>
+                                        <td class="hidden-phone">Employee 06</td>
+										<td>User</td>
+                                        <td>Permanent</td>
+										<td>12-12-2017/30-12-2017</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-success btn-xs btn-drop tip" title="Active"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-primary btn-xs btn-drop tip" title="Edit"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-xs btn-drop tip" title="Delete"><i class="fa fa-trash"></i></button>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td><a href="#">Vector Ltd</a></td>
-                                        <td class="hidden-phone">Lorem Ipsum dorolo imit</td>
-                                        <td>12120.00$ </td>
-                                        <td><span class="label label-success label-mini">Due</span></td>
-                                        <td>
-                                            <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                            <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+									<tr>
+                                        <td><a href="#">Emp 0007</a></td>
+                                        <td class="hidden-phone">Employee 07</td>
+										<td>Admin</td>
+                                        <td>-</td>
+										<td>12-12-2017/30-12-2017</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-success btn-xs btn-drop tip" title="Active"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-primary btn-xs btn-drop tip" title="Edit"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-xs btn-drop tip" title="Delete"><i class="fa fa-trash"></i></button>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="#">
-                                                Adimin co
-                                            </a>
-                                        </td>
-                                        <td class="hidden-phone">Lorem Ipsum dorolo</td>
-                                        <td>56456.00$ </td>
-                                        <td><span class="label label-warning label-mini">Due</span></td>
-                                        <td>
-                                            <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                            <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+									<tr>
+                                        <td><a href="#">Emp 0008</a></td>
+                                        <td class="hidden-phone">Employee 08</td>
+										<td>Lead</td>
+                                        <td>-</td>
+										<td>12-12-2017/30-12-2017</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-warning btn-xs btn-drop tip" title="Inactive"><i class="fa fa-exclamation-triangle"></i></button>
+                                            <button class="btn btn-primary btn-xs btn-drop tip" title="Edit"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-xs btn-drop tip" title="Delete"><i class="fa fa-trash"></i></button>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td><a href="#">Vector Ltd</a></td>
-                                        <td class="hidden-phone">Lorem Ipsum dorolo imit</td>
-                                        <td>12120.00$ </td>
-                                        <td><span class="label label-info label-mini">Due</span></td>
-                                        <td>
-                                            <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                            <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+									<tr>
+                                        <td><a href="#">Emp 0009</a></td>
+                                        <td class="hidden-phone">Employee 09</td>
+										<td>Super Admin</td>
+                                        <td>-</td>
+										<td>12-12-2017/30-12-2017</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-success btn-xs btn-drop tip" title="Active"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-primary btn-xs btn-drop tip" title="Edit"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-xs btn-drop tip" title="Delete"><i class="fa fa-trash"></i></button>
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="#">
-                                            Adimin co
-                                            </a>
-                                        </td>
-                                        <td class="hidden-phone">Lorem Ipsum dorolo</td>
-                                        <td>56456.00$ </td>
-                                        <td><span class="label label-warning label-mini">Due</span></td>
-                                        <td>
-                                            <button class="btn btn-success btn-xs"><i class="fa fa-check"></i></button>
-                                            <button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i></button>
-                                            <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o "></i></button>
+									<tr>
+                                        <td><a href="#">Emp 0010</a></td>
+                                        <td class="hidden-phone">Employee 10</td>
+										<td>User</td>
+                                        <td>Permanent</td>
+										<td>12-12-2017/30-12-2017</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-success btn-xs btn-drop tip" title="Active"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-primary btn-xs btn-drop tip" title="Edit"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-xs btn-drop tip" title="Delete"><i class="fa fa-trash"></i></button>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -530,30 +545,68 @@
 								<form role="form">
                                     <div class="form-group col-lg-6 col-md-12">
                                         <label for="exampleInputEmail1">First Name</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" tabindex="1">
+                                        <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter first name" tabindex="1">
                                     </div>
                                     <div class="form-group col-lg-6 col-md-12">
                                         <label for="exampleInputPassword1">Last Name</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password" tabindex="2">
+                                        <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter last name" tabindex="2">
                                     </div>
 									<div class="form-group col-lg-6 col-md-12">
                                         <label for="exampleInputPassword1">Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" tabindex="3">
+                                        <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter Password" tabindex="3">
                                     </div>
 									<div class="form-group col-lg-6 col-md-12">
                                         <label for="exampleInputPassword1">Confirm Password</label>
-                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" tabindex="4">
+                                        <input type="password" class="form-control" id="cpwd" name="cpwd" placeholder="Password" tabindex="4">
                                     </div>
                                     <div class="form-group col-lg-6 col-md-12">
                                         <label for="exampleInputPassword1">Email</label>
-                                        <input type="email" class="form-control" id="exampleInputPassword1" placeholder="Password" tabindex="5">
+                                        <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Password" tabindex="5">
                                     </div>
 									<div class="form-group col-lg-6 col-md-12">
                                         <label for="exampleInputPassword1">Mobile Number</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password" tabindex="6">
+                                        <input type="text" class="form-control" id="mobileno" name="mobileno" placeholder="Password" tabindex="6">
                                     </div>
-                                    
-                                    
+                                    <div class="form-group col-lg-6 col-md-12">
+                                        <label for="exampleInputPassword1">Role</label>
+                                        <select id="roles" name="roles" class="form-control" tabindex="7" style="width:100%;">
+											<option value="">Select Role</option>
+											<option value="superadmin">Super Admin</option>
+											<option value="admin">Admin</option>
+											<option value="lead">Lead</option>
+											<option value="user">User</option>
+										</select>
+                                    </div>
+									<div class="form-group col-lg-6 col-md-12">
+                                        <label for="exampleInputPassword1">Access type</label>
+										<div class="col-md-12">
+											<label class="radio-inline">
+												<input id="accessType-T" name="accessType" value="T" type="radio" tabindex="8"> Temperary
+											</label>
+											<label class="radio-inline">
+												<input id="accessType-P" name="accessType" value="P" type="radio"  tabindex="8"> Permanent
+											</label>
+										</div>
+                                    </div>
+									<div class="clearfix"></div>
+                                    <div class="form-group col-lg-6 col-md-12">
+                                        <label for="exampleInputEmail1">Access From</label>
+                                        <span class="input-group">
+											<input id="accessFrom" name="accessFrom" class="form-control" value="" type="text" tabindex="9">
+											<span class="input-group-btn">
+												<button class="btn btn-primary" type="button" title=""><i class="fa fa-calendar" data-original-title="" title=""></i></button>
+											</span>
+										</span>
+                                    </div>
+                                    <div class="form-group col-lg-6 col-md-12">
+                                        <label for="exampleInputEmail1">Access To</label>
+                                        <span class="input-group">
+											<input id="accessTo" name="accessTo" class="form-control" value="" type="text" tabindex="10">
+											<span class="input-group-btn">
+												<button class="btn btn-primary" type="button" title=""><i class="fa fa-calendar" data-original-title="" title=""></i></button>
+											</span>
+										</span>
+                                    </div>
                               </form>
 							  <div class="clearfix"></div>
 							</div>
@@ -669,9 +722,25 @@
 
     <!-- start:javascript for this page -->
     <script src="assets/select2/select2.js"></script>
+	<script src="assets/bootstrap-datepicker/bootstrap-datepicker.js"></script>
     <script>
 		$(function(){
+			$('#roles').select2({
+				 placeholder: 'Select Role',
+				 allowClear: true
+			});
+			$('#accessFrom').datepicker({
+				format: "dd-mm-yyyy",
+				todayBtn: true,
+				autoclose: true
+			});
 			
+			$('#accessTo').datepicker({
+				format: "dd-mm-yyyy",
+				todayBtn: true,
+				autoclose: true
+			});
+			 
 		})
     </script>
     <!-- end:javascript for this page -->
