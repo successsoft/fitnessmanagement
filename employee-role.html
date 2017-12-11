@@ -544,12 +544,19 @@
 							<div class="modal-body">
 								<form role="form">
                                     <div class="form-group col-lg-6 col-md-12">
-                                        <label for="exampleInputEmail1">First Name</label>
-                                        <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter first name" tabindex="1">
+                                        <label for="exampleInputEmail1">Employee Code</label>
+                                        <select id="empCode" name="empCode" class="form-control" tabindex="1" style="width:100%;">
+											<option value="">Select Employee Code</option>
+											<option value="Emp 001">Emp 001</option>
+											<option value="Emp 002">Emp 002</option>
+											<option value="Emp 003">Emp 003</option>
+											<option value="Emp 004">Emp 004</option>
+											<option value="Emp 005">Emp 005</option>
+										</select>
                                     </div>
                                     <div class="form-group col-lg-6 col-md-12">
-                                        <label for="exampleInputPassword1">Last Name</label>
-                                        <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter last name" tabindex="2">
+                                        <label for="empName">Employee Name</label>
+                                        <input type="text" class="form-control" id="empName" name="empName" placeholder="Enter Employee name" tabindex="2">
                                     </div>
 									<div class="form-group col-lg-6 col-md-12">
                                         <label for="exampleInputPassword1">Password</label>
@@ -725,6 +732,11 @@
 	<script src="assets/bootstrap-datepicker/bootstrap-datepicker.js"></script>
     <script>
 		$(function(){
+		
+			$('#empCode').select2({
+				 placeholder: 'Select Employee code',
+				 allowClear: true
+			});
 			$('#roles').select2({
 				 placeholder: 'Select Role',
 				 allowClear: true

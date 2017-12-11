@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-
 <head>
 	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
@@ -523,19 +521,53 @@
 							</div>
 							<div class="modal-body">
 								<form role="form">
+									<div class="form-group col-lg-6 col-md-12">
+                                        <label for="branch">Branch</label>
+                                        <select id="branch" name="branch" class="form-control" tabindex="19" style="width:100%;">
+											<option value="">Select Branch</option>
+											<option value="Branch 1">Branch 1</option>
+											<option value="Branch 2">Branch 2</option>
+											<option value="Branch 3">Branch 3</option>
+											<option value="Branch 4">Branch 4</option>
+											<option value="Branch 5">Branch 5</option>
+										</select>
+                                    </div>
+									<div class="form-group col-lg-6 col-md-12">
+                                        <label for="memId">Member Id</label>
+                                        <select id="memId" name="memId" class="form-control" tabindex="1" style="width:100%;">
+											<option value="">Select Member Id</option>
+											<option value="Mem 001">Mem 001</option>
+											<option value="Mem 002">Mem 002</option>
+											<option value="Mem 003">Mem 003</option>
+											<option value="Mem 004">Mem 004</option>
+											<option value="Mem 005">Mem 005</option>
+										</select>
+                                    </div>
+									<div class="clearfix"></div>
                                     <div class="form-group col-lg-6 col-md-12">
-                                        <label for="packageType">Package Type</label>
-                                        <input type="text" class="form-control" id="packageType" name="packageType" placeholder="Enter package type" tabindex="1">
+                                        <label for="payMode">Payment Mode</label>
+                                        <select id="payMode" name="payMode" class="form-control" tabindex="2" style="width:100%;">
+											<option value="">Select Payment Mode</option>
+											<option value="Cash">Cash</option>
+											<option value="Debit">Debit</option>
+											<option value="Credit">Credit</option>
+											<option value="Cheque">Cheque</option>
+											<option value="Paytm">Paytm</option>
+											<option value="Netbanking">Netbanking</option>
+										</select>
                                     </div>
                                     <div class="form-group col-lg-6 col-md-12">
-                                        <label for="memberType">Member Type</label>
-                                        <select id="memberType" name="memberType" class="form-control" tabindex="2" style="width:100%;">
-											<option value="">Select Member Type</option>
-											<option value="SI">Aingle</option>
-											<option value="CP">Couple</option>
-											<option value="ST">Student</option>
-											<option value="SC">Senior Citizen</option>
-										</select>
+                                        <div class="form-group col-lg-6 col-md-12">
+											<label for="payMode">Payment Mode</label>
+											<div class="col-md-12">
+												<label class="radio-inline">
+													<input id="payMode-A" name="payMode" value="E" type="radio" tabindex="15"> EMI
+												</label>
+												<label class="radio-inline">
+													<input id="payMode-I" name="payMode" value="F" type="radio"  tabindex="15"> Full
+												</label>
+											</div>
+										</div>
                                     </div>
 									<div class="clearfix"></div>
 									<div class="form-group col-lg-6 col-md-12">
@@ -670,6 +702,18 @@
     <script src="assets/select2/select2.js"></script>
 	<script>
 		$(function(){
+			$('#branch').select2({
+				 placeholder: 'Select Branch',
+				 allowClear: true
+			});
+			$('#memId').select2({
+				 placeholder: 'Select member id',
+				 allowClear: true
+			});
+			$('#payMode').select2({
+				 placeholder: 'Select payment mode',
+				 allowClear: true
+			});
 			$('#memberType').select2({
 				 placeholder: 'Select member type',
 				 allowClear: true
