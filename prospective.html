@@ -515,7 +515,7 @@
                 </div>
 				
 				<div class="modal fade bs-prospective" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
-					<div class="modal-dialog modal-md">
+					<div class="modal-dialog modal-lg">
 						<div class="modal-content">
 							<div class="modal-header">
 								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -523,15 +523,15 @@
 							</div>
 							<div class="modal-body">
 								<form role="form">
-                                    <div class="form-group col-lg-6 col-md-12">
+                                    <div class="form-group col-lg-4 col-md-12">
                                         <label for="fname">First Name</label>
                                         <input type="text" class="form-control" id="fname" name="fname" placeholder="Enter first name" tabindex="1">
                                     </div>
-                                    <div class="form-group col-lg-6 col-md-12">
+                                    <div class="form-group col-lg-4 col-md-12">
                                         <label for="lname">Last Name</label>
                                         <input type="text" class="form-control" id="lname" name="lname" placeholder="Enter last name" tabindex="2">
                                     </div>
-									<div class="form-group col-lg-6 col-md-12">
+									<div class="form-group col-lg-4 col-md-12">
                                         <label for="gender">Gender</label>
 										<div class="col-md-12">
 											<label class="radio-inline">
@@ -542,53 +542,54 @@
 											</label>
 										</div>
                                     </div>
-									<div class="form-group col-lg-6 col-md-12">
+									<div class="clearfix"></div>
+									<div class="form-group col-lg-4 col-md-12">
                                         <label for="age">Age</label>
                                         <input type="text" class="form-control" id="age" name="age" placeholder="Enter Age" tabindex="6">
                                     </div>
-									<div class="form-group col-lg-6 col-md-12">
+									<div class="form-group col-lg-4 col-md-12">
                                         <label for="mobileno">Mobile Number</label>
                                         <input type="text" class="form-control" id="mobileno" name="mobileno" placeholder="Enter Mobile Number" tabindex="9">
                                     </div>
 									
-									<div class="form-group col-lg-6 col-md-12">
+									<div class="form-group col-lg-4 col-md-12">
                                         <label for="emailid">Email Id</label>
                                         <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Enter Email id" tabindex="11">
                                     </div>
-									<div class="form-group col-lg-6 col-md-12">
+									<div class="form-group col-lg-4 col-md-12">
                                         <label for="add1">Address 1</label>
                                         <input type="text" class="form-control" id="add1" name="add1" placeholder="Enter Address 1" tabindex="13">
                                     </div>
-									<div class="form-group col-lg-6 col-md-12">
+									<div class="form-group col-lg-4 col-md-12">
                                         <label for="add2">Address 2</label>
                                         <input type="text" class="form-control" id="add2" name="add2" placeholder="Enter Address 2" tabindex="14">
                                     </div>
-									<div class="form-group col-lg-6 col-md-12">
+									<div class="form-group col-lg-4 col-md-12">
                                         <label for="city">City</label>
                                         <input type="text" class="form-control" id="city" name="city" placeholder="Enter City" tabindex="15">
                                     </div>
-									<div class="form-group col-lg-6 col-md-12">
+									<div class="form-group col-lg-4 col-md-12">
                                         <label for="pincode">Pincode</label>
                                         <input type="text" class="form-control" id="pincode" name="pincode" placeholder="Enter Pincode" tabindex="16">
                                     </div>
-									<div class="form-group col-lg-6 col-md-12">
+									<div class="form-group col-lg-4 col-md-12">
                                         <label for="district">District</label>
                                         <input type="text" class="form-control" id="district" name="district" placeholder="Enter District" tabindex="17">
                                     </div>
-									<div class="form-group col-lg-6 col-md-12">
+									<div class="form-group col-lg-4 col-md-12">
                                         <label for="state">State</label>
                                         <input type="text" class="form-control" id="state" name="state" placeholder="Enter State" tabindex="18">
                                     </div>
-									<div class="form-group col-lg-6 col-md-12">
-                                        <label for="joiningDate">Expected date to join</label>
-                                        <span class="input-group">
+									<div class="form-group col-lg-4 col-md-12">
+                                        <label for="expJoiningDate">Expected date to join</label>
+                                        <span class="input-group expJoiningDate">
 											<input id="expJoiningDate" name="expJoiningDate" class="form-control" value="" type="text" tabindex="23">
 											<span class="input-group-btn">
 												<button class="btn btn-primary" type="button" title=""><i class="fa fa-calendar" title=""></i></button>
 											</span>
 										</span>
                                     </div>
-                                    <div class="form-group col-lg-6 col-md-12">
+                                    <div class="form-group col-lg-4 col-md-12">
                                         <label for="comments">Comments</label>
                                         <span class="input-group">
 											<textarea id="comments" name="comments" class="form-control" value="" tabindex="24"></textarea>
@@ -720,7 +721,7 @@
 				 placeholder: 'Select Blood Group',
 				 allowClear: true
 			});
-			$('#dob').datepicker({
+			$('.dob').datepicker({
 				format: "dd-mm-yyyy",
 				todayBtn: true,
 				autoclose: true,
@@ -742,7 +743,7 @@
 				 placeholder: 'Select Package Type',
 				 allowClear: true
 			});
-			$('#expJoiningDate').datepicker({
+			$('.expJoiningDate').datepicker({
 				format: "dd-mm-yyyy",
 				todayBtn: true,
 				autoclose: true,
