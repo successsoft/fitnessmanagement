@@ -103,6 +103,29 @@ Member Type - single,couple,student,SeniorCitizen
 Amount - text
 Package Mode - Active,Inactive
 
+Apply Leave
+===========
+Start Date - datepicker
+EndDate  - datepicker
+AbsenceName - drop down- Personal Leave,Sick Leave,Compensatory Off,vaction Leave,Loss of Pay
+Leave availability - read - textbox                              
+PartialDays - Alldays,Startdayonly,Enddayonly,StartandEnd days,None
+Start day is half day - check box
+Duration
+
+Absence Master
+============
+Absence Name - text
+Days for Year - text
+Absence Status - check box - Active,Inactive
+
+Holiday Master
+==============
+Holiday Name - text
+Holiday Type - national,state
+Holiday Date - datepicker
+Holiday Status - Active,Inactive
+
  
 
 
