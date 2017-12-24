@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 
@@ -21,6 +21,9 @@
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
     <link rel="stylesheet" type="text/css" href="css/owl.transitions.css">
+	
+	<link href='assets/fullcalendar-3.7.0/fullcalendar.min.css' rel='stylesheet' />
+	<link href='assets/fullcalendar-3.7.0/fullcalendar.print.min.css' rel='stylesheet' media='print' />
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -309,7 +312,7 @@
                                         <li><a href="payment.html"><i class="fa fa-money"></i> Payment</a></li>
                                     </ul>
                                 </li>
-								<li class="dropdown">
+								<li class="dropdown active">
                                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                                         <div class="text-center">
                                             <i class="fa fa-user fa-3x"></i><br>
@@ -361,7 +364,7 @@
                                         </div>
                                     </a>
                                 </li>
-                                <li class="active">
+                                <li>
                                     <a href="settings.html">
                                         <div class="text-center">
                                             <i class="fa fa-cog fa-3x"></i><br>
@@ -384,78 +387,73 @@
                 <!-- start:breadcrumb -->
                 <ol class="breadcrumb">
                     <li><a href="#">Home</a></li>
-                    <li class="active">Settings</li>
+                    <li class="active">Leave Schedules</li>
                 </ol>
                 <!-- end:breadcrumb -->   
 
-                <div class="row">
+                <div class="row" id="home-content" style="min-height:300px;">
 					<div class="col-lg-12">
-					  <section class="panel">
-						  <div class="panel-body">
-							  <div class="form">
-								  <form class="cmxform form-horizontal tasi-form" id="signupForm" method="get" action="#">
-									  <div class="form-group ">
-										  <label for="firstname" class="control-label col-lg-2">Firstname</label>
-										  <div class="col-lg-10">
-											  <input class=" form-control" id="firstname" name="firstname" type="text" />
-										  </div>
-									  </div>
-									  <div class="form-group ">
-										  <label for="lastname" class="control-label col-lg-2">Lastname</label>
-										  <div class="col-lg-10">
-											  <input class=" form-control" id="lastname" name="lastname" type="text" />
-										  </div>
-									  </div>
-									  <div class="form-group ">
-										  <label for="username" class="control-label col-lg-2">Username</label>
-										  <div class="col-lg-10">
-											  <input class="form-control " id="username" name="username" type="text" />
-										  </div>
-									  </div>
-									  <div class="form-group ">
-										  <label for="password" class="control-label col-lg-2">Password</label>
-										  <div class="col-lg-10">
-											  <input class="form-control " id="password" name="password" type="password" />
-										  </div>
-									  </div>
-									  <div class="form-group ">
-										  <label for="confirm_password" class="control-label col-lg-2">Confirm Password</label>
-										  <div class="col-lg-10">
-											  <input class="form-control " id="confirm_password" name="confirm_password" type="password" />
-										  </div>
-									  </div>
-									  <div class="form-group ">
-										  <label for="email" class="control-label col-lg-2">Email</label>
-										  <div class="col-lg-10">
-											  <input class="form-control " id="email" name="email" type="email" />
-										  </div>
-									  </div>
-									  <div class="form-group ">
-										  <label for="agree" class="control-label col-lg-2 col-sm-3">Agree to Our Policy</label>
-										  <div class="col-lg-10 col-sm-9">
-											  <input  type="checkbox" style="width: 20px" class="checkbox form-control" id="agree" name="agree" />
-										  </div>
-									  </div>
-									  <div class="form-group ">
-										  <label for="newsletter" class="control-label col-lg-2 col-sm-3">Receive the Newsletter</label>
-										  <div class="col-lg-10 col-sm-9">
-											  <input  type="checkbox" style="width: 20px" class="checkbox form-control" id="newsletter" name="newsletter" />
-										  </div>
-									  </div>
-
-									  <div class="form-group">
-										  <div class="col-lg-offset-2 col-lg-10">
-											  <button class="btn btn-primary" type="submit">Save</button>
-											  <button class="btn btn-default" type="button">Cancel</button>
-										  </div>
-									  </div>
-								  </form>
-							  </div>
-						  </div>
-					  </section>
+                        <section class="panel">
+                            <div id='calendar'></div>
+						</section>
 					</div>
                 </div>
-
+				
+				<div class="modal fade bs-holiday" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" style="display: none;">
+					<div class="modal-dialog modal-md">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+								<h4 class="modal-title" id="myLargeModalLabel">Add Holiday</h4>
+							</div>
+							<div class="modal-body">
+								<form role="form">
+									<div class="form-group col-lg-6 col-md-12">
+                                        <label for="hdName">Name</label>
+                                        <input id="hdName" name="hdName" class="form-control" value="" type="text" tabindex="1">
+                                    </div>
+									<div class="form-group col-lg-6 col-md-12">
+                                        <label for="hdType">Type</label>
+										<div class="col-md-12">
+											<label class="radio-inline">
+												<input id="hdType-Y" name="hdType" value="N" type="radio" tabindex="2"> National
+											</label>
+											<label class="radio-inline">
+												<input id="hdType-N" name="hdType" value="S" type="radio"  tabindex="2"> State
+											</label>
+										</div>
+                                    </div>
+									<div class="clearfix"></div>
+                                    <div class="form-group col-lg-6 col-md-12">
+                                        <label for="exampleInputEmail1">Date</label>
+                                        <span class="input-group hdDate">
+											<input id="hdDate" name="hdDate" class="form-control" value="" type="text" tabindex="3">
+											<span class="input-group-btn">
+												<button class="btn btn-primary" type="button" title=""><i class="fa fa-calendar" data-original-title="" title=""></i></button>
+											</span>
+										</span>
+                                    </div>
+                                    <div class="form-group col-lg-6 col-md-12">
+                                        <label for="hdStatus">Status</label>
+										<div class="col-md-12">
+											<label class="radio-inline">
+												<input id="hdStatus-A" name="hdStatus" value="A" type="radio" tabindex="4"> Active
+											</label>
+											<label class="radio-inline">
+												<input id="hdStatus-I" name="hdStatus" value="I" type="radio"  tabindex="4"> Inactive
+											</label>
+										</div>
+                                    </div>
+									<div class="clearfix"></div>
+								</form>
+							  <div class="clearfix"></div>
+							</div>
+							<div class="modal-footer">
+								<button title="" class="btn btn-success btn-drop" type="submit" tabindex="3"><i title="" class="fa fa-save" data-original-title=""></i> Save</button>
+							</div>
+						</div><!-- /.modal-content -->
+					</div><!-- /.modal-dialog -->
+				</div>
                 
             </div>
         </div>
@@ -562,10 +560,92 @@
 	<!-- end:javascript -->
 
     <!-- start:javascript for this page -->
-   
-    <script src="js/jquery.validate.min.js"></script>
-    <script src="js/form-validation-script.js"></script>
-    
+    <script src='assets/fullcalendar-3.7.0/moment.min.js'></script>
+	<script src='assets/fullcalendar-3.7.0/fullcalendar.min.js'></script>
+	
+	<script src="assets/select2/select2.js"></script>
+	<script src="assets/bootstrap-datepicker/bootstrap-datepicker.js"></script>
+	<script src="assets/bootstrap-datetimepicker/moment-2.9.0.js"></script>
+	<script src="assets/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
+    <script>
+
+		$(document).ready(function() {
+			$('.hdDate').datepicker({
+				format: "dd-mm-yyyy",
+				todayBtn: true,
+				autoclose: true
+			});
+			$('#calendar').fullCalendar({
+				header: {
+					left: 'prev,next today',
+					center: 'title',
+					right: 'month,basicWeek,basicDay'
+				},
+				defaultDate: '2017-11-12',
+				navLinks: true, // can click day/week names to navigate views
+				editable: true,
+				eventLimit: true, // allow "more" link when too many events
+				events: [
+					{
+						title: 'All Day Event',
+						start: '2017-11-01'
+					},
+					{
+						title: 'Long Event',
+						start: '2017-11-07',
+						end: '2017-11-10'
+					},
+					{
+						id: 999,
+						title: 'Repeating Event',
+						start: '2017-11-09T16:00:00'
+					},
+					{
+						id: 999,
+						title: 'Repeating Event',
+						start: '2017-11-16T16:00:00'
+					},
+					{
+						title: 'Conference',
+						start: '2017-11-11',
+						end: '2017-11-13'
+					},
+					{
+						title: 'Meeting',
+						start: '2017-11-12T10:30:00',
+						end: '2017-11-12T12:30:00'
+					},
+					{
+						title: 'Lunch',
+						start: '2017-11-12T12:00:00'
+					},
+					{
+						title: 'Meeting',
+						start: '2017-11-12T14:30:00'
+					},
+					{
+						title: 'Happy Hour',
+						start: '2017-11-12T17:30:00'
+					},
+					{
+						title: 'Dinner',
+						start: '2017-11-12T20:00:00'
+					},
+					{
+						title: 'Birthday Party',
+						start: '2017-11-13T07:00:00'
+					},
+					{
+						title: 'Click for Google',
+						url: 'http://google.com/',
+						start: '2017-11-28'
+					}
+				]
+			});
+			
+		});
+
+	</script>
     <!-- end:javascript for this page -->
 
 </body>

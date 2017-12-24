@@ -3183,6 +3183,31 @@ label.error {
     font-weight: normal;
     color: #a94442;
 }
+.div-branch .panel{
+	border: 1px solid #2980b9;
+	box-shadow: inset 5px 5px 2px rgba(23, 24, 24,.075), 5px 5px 8px rgba(23, 24, 24, 0.6);
+		-webkit-box-shadow: inset 5px 5px 2px rgba(23, 24, 24,.075), 5px 5px 8px rgba(23, 24, 24, 0.6);
+			-moz-box-shadow: inset 5px 5px 2px rgba(23, 24, 24,.075), 5px 5px 8px rgba(23, 24, 24, 0.6);
+				-ms-box-shadow: inset 5px 5px 2px rgba(23, 24, 24,.075), 5px 5px 8px rgba(23, 24, 24, 0.6);
+					-o-box-shadow: inset 5px 5px 2px rgba(23, 24, 24,.075), 5px 5px 8px rgba(23, 24, 24, 0.6);
+}
+.div-branch hr{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-top: 1px solid #2980b9;
+}
+.div-branch .list-group{
+	margin-bottom: 5px;
+}
+
+.div-branch .list-group-item{
+	padding: 5px 5px;
+    border:none;
+}
+
+.div-branch .list-group{
+	
+}
 
 /*	MEDIA RESPONSIVE
 ==================================================*/
