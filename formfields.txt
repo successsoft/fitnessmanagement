@@ -126,6 +126,16 @@ Holiday Type - national,state
 Holiday Date - datepicker
 Holiday Status - Active,Inactive
 
+MannualFollowup
+================
+ClientName-Read
+ClientId - Read
+MobileNo-Read
+Followup Type - dropdown - Mobile,Direct
+FollowupStatus - completed,inprogress, - if followup status is completed, we should show the ExpectedDatetoPayDueAmount datepicker otherwise need to show the reson drop down
+Reason - drop down - not reachable,not picking the call,
+ExpectedDatetoPayDueAmount- Datepicker
+Comments- Read and Write
  
 
 

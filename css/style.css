@@ -436,8 +436,8 @@ a:hover{
 	background: rgba(18, 19, 20, 0.34);
 	*padding-top: 50px;
 	*padding-bottom: 60px;
-	padding-top: 25px;
-	padding-bottom: 55px;
+	padding-top: 0px;
+	padding-bottom: 10px;
 }
 
 #header .navbar-toggle{
