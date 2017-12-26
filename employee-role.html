@@ -24,6 +24,8 @@
 	
 	<link rel="stylesheet" type="text/css" href="assets/select2/select2.css">
 	<link rel="stylesheet" type="text/css" href="assets/bootstrap-datepicker/bootstrap-datepicker.css">
+	
+	<link rel="stylesheet" type="text/css" href="assets/datatables/datatables.css">
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -402,7 +404,7 @@
 								</div>
 								<div class="clearfix"></div>
                             </header>
-                            <table class="table table-striped table-advance table-hover table-custom">
+                            <table id="empRoleTable" class="table table-striped table-advance table-hover table-custom" cellspacing="0" width="100%">
                                 <thead>
                                     <tr>
                                         <th class="col-md-2"><i class="fa fa-bullhorn"></i> Employee Id</th>
@@ -530,6 +532,66 @@
 										<td>12-12-2017/30-12-2017</td>
                                         <td class="text-center">
                                             <button class="btn btn-success btn-xs btn-drop tip" title="Active"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-primary btn-xs btn-drop tip" title="Edit"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-xs btn-drop tip" title="Delete"><i class="fa fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+									<tr>
+                                        <td><a href="#">Emp 0011</a></td>
+                                        <td class="hidden-phone">Employee 11</td>
+										<td>Admin</td>
+                                        <td>-</td>
+										<td>12-12-2017/30-12-2017</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-success btn-xs btn-drop tip" title="Active"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-primary btn-xs btn-drop tip" title="Edit"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-xs btn-drop tip" title="Delete"><i class="fa fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><a href="#">Emp 0012</a></td>
+                                        <td class="hidden-phone">Employee 12</td>
+										<td>User</td>
+                                        <td>Temperary</td>
+										<td>12-12-2017/30-12-2017</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-success btn-xs btn-drop tip" title="Active"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-primary btn-xs btn-drop tip" title="Edit"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-xs btn-drop tip" title="Delete"><i class="fa fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+									<tr>
+                                        <td><a href="#">Emp 0013</a></td>
+                                        <td class="hidden-phone">Employee 13</td>
+										<td>User</td>
+                                        <td>Temperary</td>
+										<td>12-12-2017/30-12-2017</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-success btn-xs btn-drop tip" title="Active"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-primary btn-xs btn-drop tip" title="Edit"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-xs btn-drop tip" title="Delete"><i class="fa fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+									<tr>
+                                        <td><a href="#">Emp 0014</a></td>
+                                        <td class="hidden-phone">Employee 14</td>
+										<td>User</td>
+                                        <td>Permanent</td>
+										<td>12-12-2017/30-12-2017</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-success btn-xs btn-drop tip" title="Active"><i class="fa fa-check"></i></button>
+                                            <button class="btn btn-primary btn-xs btn-drop tip" title="Edit"><i class="fa fa-pencil"></i></button>
+                                            <button class="btn btn-danger btn-xs btn-drop tip" title="Delete"><i class="fa fa-trash"></i></button>
+                                        </td>
+                                    </tr>
+									<tr>
+                                        <td><a href="#">Emp 0015</a></td>
+                                        <td class="hidden-phone">Employee 15</td>
+										<td>User</td>
+                                        <td>Temperary</td>
+										<td>12-12-2017/30-12-2017</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-warning btn-xs btn-drop tip" title="Inactive"><i class="fa fa-exclamation-triangle"></i></button>
                                             <button class="btn btn-primary btn-xs btn-drop tip" title="Edit"><i class="fa fa-pencil"></i></button>
                                             <button class="btn btn-danger btn-xs btn-drop tip" title="Delete"><i class="fa fa-trash"></i></button>
                                         </td>
@@ -729,7 +791,10 @@
     <!-- start:javascript for this page -->
     <script src="assets/select2/select2.js"></script>
 	<script src="assets/bootstrap-datepicker/bootstrap-datepicker.js"></script>
-    <script>
+	
+	
+	<script src="assets/datatables/datatables.js"></script>
+	<script>
 		$(function(){
 		
 			$('#empCode').select2({
@@ -751,7 +816,22 @@
 				todayBtn: true,
 				autoclose: true
 			});
-			 
+			
+			$('#empRoleTable').DataTable({
+				"pagingType" : "full_numbers",
+				"responsive" : true,
+				/** "language": {
+				    "paginate": {
+						"first": "«",
+						"last": "»",
+						"next": "»",
+						"previous": "«"
+				    }
+				},*/
+				"fnDrawCallback": function(settings) {
+					$(".dataTables_paginate > ul").addClass("pagination pagination-primary pagination-separated")
+				}
+			});
 		})
     </script>
     <!-- end:javascript for this page -->
